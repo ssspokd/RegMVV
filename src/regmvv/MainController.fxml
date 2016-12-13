@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1"  id="AnchorPane" cache="true"  prefHeight="224.0" prefWidth="289.0" xmlns="http://javafx.com/javafx/8"  fx:controller="regmvv.MainForm">
+   <children>
+    <MenuBar prefHeight="25.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+            <MenuItem visible="false" fx:id="OpenMenu" mnemonicParsing="false"  text="Open" />
+            <Menu visible="false" mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem visible="false" fx:id="CloseMenu" disable="true" mnemonicParsing="false"  text="Close File" />
+            <MenuItem visible="false" disable="true" mnemonicParsing="true" text="Save" />
+            <MenuItem  visible="false" disable="true" mnemonicParsing="true" text="Save As"  />
+            <SeparatorMenuItem mnemonicParsing="false" visible="false" />
+            <MenuItem mnemonicParsing="false"  text="Quit" visible="true" onAction="#clickExit"  />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" visible="false"  text="Edit">
+          <items>
+            <MenuItem fx:id="UndoMenu" disable="true" mnemonicParsing="false" text="Undo" visible="false" />
+            <MenuItem fx:id="RedoMenu" disable="true" mnemonicParsing="false" text="Redo" visible="false" />
+            <MenuItem fx:id="EditMenu" disable="true" mnemonicParsing="false"  text="Edit" />
+          </items>
+        </Menu>
+            <Menu fx:id="actionMenu" visible="false"  disable="true" mnemonicParsing="false" text="Action">
+               <items>
+                  <MenuItem mnemonicParsing="false"  text="Action" />
+               </items></Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <SplitPane layoutY="25.0" orientation="VERTICAL" prefHeight="347.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+         <items>
+            <AnchorPane prefHeight="249.0" prefWidth="287.0">
+               <children>
+                  <Label layoutX="8.0" layoutY="14.0" text="OSP" />
+                  <ComboBox fx:id="CmbOSP" onAction="#onActionOspCmb"   layoutX="123.0" layoutY="10.0" prefWidth="150.0" />
+                  <ComboBox fx:id="CmbContragent" onAction="#onActionContragentCmb"   layoutX="123.0" layoutY="44.0" prefWidth="150.0" />
+                  <Label layoutX="8.0" layoutY="48.0" text="ContrAgent" />
+                  <Label layoutX="8.0" layoutY="89.0" text="Type action" />
+                  <ComboBox fx:id="CmbTypeAction"  layoutX="123.0" layoutY="85.0" prefWidth="150.0" />
+                  <Label layoutX="8.0" layoutY="129.0" text="Action" />
+                  <ComboBox fx:id="CmbAction"  layoutX="123.0" layoutY="125.0" prefWidth="150.0" />
+                  <Button onAction="#ButtonAction"  layoutX="118.0" layoutY="158.0" mnemonicParsing="false" text="OK" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>      
+    </children>
+</AnchorPane>

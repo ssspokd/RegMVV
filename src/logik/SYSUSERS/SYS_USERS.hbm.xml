@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+  "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+  "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="logik.SYSUSERS.SYS_USERS" table="SYS_USERS">
+        <id column="ID" name="ID" type="long">
+            <generator class="increment"/>
+        </id>
+        <property column="LOGIN_USER" name="LOGIN_USER" type="string"/>
+        <property column="PASSWORD_USER" name="PASSWORD_USER" type="string"/>
+        <property column="SUSER_ID" name="SUSERS_ID" type="long" />
+    </class>
+</hibernate-mapping>
